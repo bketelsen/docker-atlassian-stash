@@ -33,6 +33,7 @@ RUN echo 'export STASH_HOME="/var/stash-home"' >> ~/.bashrc
 ENV STASH_HOME /var/stash-home
 RUN mkdir -p /var/stash-home && chmod 777 /var/stash-home
 VOLUME /var/stash-home
+VOLUME /opt/atlassian-stash-${STASH_VERSION}
 EXPOSE 7990 7999
 
 # Install MySQL Support for Stash
